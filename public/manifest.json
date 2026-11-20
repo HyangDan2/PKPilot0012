@@ -1,0 +1,50 @@
+{
+  "name": "HD2Lab Vektra Vár",
+  "short_name": "Vektra Vár",
+  "description": "사진·동영상·웹캠에서 COCO 80종 객체를 브라우저 안에서 탐지하는 HD2Lab 스튜디오. YOLO11n 모델, WebGPU·WebGL·WASM 자동 선택, 업로드 0 B.",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FAFAFD",
+  "theme_color": "#FAFAFD",
+  "categories": [
+    "utilities",
+    "photo",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

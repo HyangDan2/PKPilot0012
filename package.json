@@ -1,0 +1,33 @@
+{
+  "name": "pkpilot0012-vektra-var",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "HD2Lab Vektra Vár — client-side YOLO object detection studio",
+  "scripts": {
+    "dev": "node scripts/sync-ort.mjs && vite",
+    "build": "node scripts/sync-ort.mjs && tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "brand": "python3 tools/generate_brand_assets.py",
+    "check:samples": "python3 tools/check_samples.py public/samples/*.jpg"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.31.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
+  }
+}

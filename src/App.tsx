@@ -709,6 +709,15 @@ export default function App() {
           ? `${cameraSize.width} × ${cameraSize.height}`
           : '—';
 
+  const stageAspect =
+    mode === 'photo' && activePhoto
+      ? `${activePhoto.width} / ${activePhoto.height}`
+      : mode === 'video' && video
+        ? `${video.width} / ${video.height}`
+        : mode === 'camera' && cameraSize
+          ? `${cameraSize.width} / ${cameraSize.height}`
+          : '16 / 10';
+
   const hasSource =
     (mode === 'photo' && Boolean(activePhoto)) || (mode === 'video' && Boolean(video)) || (mode === 'camera' && cameraActive);
 
@@ -822,6 +831,7 @@ export default function App() {
             dragging={dragging}
             onDragging={setDragging}
             thumbs={thumbs}
+            aspect={stageAspect}
             activeIndex={activeIndex}
             onSelectPhoto={(index) => {
               setActiveIndex(index);

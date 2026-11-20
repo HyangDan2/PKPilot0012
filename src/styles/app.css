@@ -1150,9 +1150,14 @@ img {
   .stage-col {
     min-height: 0;
   }
+  /* A phone frame follows the picture's own shape, so a landscape photo does
+     not float in a tall empty box. */
   .stage-frame {
-    height: min(58vh, 460px);
     flex: none;
+    height: auto;
+    min-height: 190px;
+    aspect-ratio: var(--stage-aspect, 16 / 10);
+    max-height: min(58vh, 460px);
   }
   .panel {
     overflow: visible;

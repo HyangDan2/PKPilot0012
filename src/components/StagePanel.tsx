@@ -25,6 +25,8 @@ interface Props {
   dragging: boolean;
   onDragging: (dragging: boolean) => void;
   thumbs: ThumbItem[];
+  /** CSS aspect-ratio string of the frame currently on the stage ("1280 / 853"). */
+  aspect: string;
   activeIndex: number;
   onSelectPhoto: (index: number) => void;
   notice: string | null;
@@ -44,6 +46,7 @@ export function StagePanel(props: Props) {
         className={`stage-frame ${props.dragging ? 'is-dragging' : ''}`}
         data-testid="stage-frame"
         data-mode={props.mode}
+        style={{ '--stage-aspect': props.aspect } as React.CSSProperties}
         onDragOver={(event) => {
           event.preventDefault();
           props.onDragging(true);

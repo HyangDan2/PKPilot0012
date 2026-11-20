@@ -196,6 +196,13 @@ export default function App() {
   const activePhoto = photos[activeIndex] ?? null;
   const activePhotoId = activePhoto?.id ?? null;
 
+  /** Entering the studio always starts at the top: on a phone the landing has
+   *  been scrolled and the stage would otherwise open out of view. */
+  const showStudio = useCallback(() => {
+    setView('studio');
+    window.scrollTo({ top: 0, left: 0 });
+  }, []);
+
   const capture = useCallback(() => {
     if (!captureRef.current) captureRef.current = new FrameCapture();
     return captureRef.current;
@@ -397,7 +404,7 @@ export default function App() {
       setPhotos((prev) => [...prev, ...created]);
       setActiveIndex(startIndex);
       setMode('photo');
-      setView('studio');
+      showStudio();
       setLiveDetections([]);
       setInferMs(null);
       setFps(0);
@@ -432,7 +439,7 @@ export default function App() {
       setPhotos([item]);
       setActiveIndex(0);
       setMode('photo');
-      setView('studio');
+      showStudio();
       setLiveDetections([]);
       setInferMs(null);
       setFps(0);
@@ -488,7 +495,7 @@ export default function App() {
         duration: element.duration,
       });
       setMode('video');
-      setView('studio');
+      showStudio();
       setLiveDetections([]);
       setInferMs(null);
       setFps(0);
@@ -525,7 +532,7 @@ export default function App() {
         setCameraActive(true);
         setCameraSize({ width: element.videoWidth || 1280, height: element.videoHeight || 720 });
         setMode('camera');
-        setView('studio');
+        showStudio();
         setLiveDetections([]);
         setInferMs(null);
         setFps(0);
@@ -786,7 +793,7 @@ export default function App() {
           info={info}
           samples={samples}
           session={activePhoto ? { name: activePhoto.name, count: photos.length } : null}
-          onResume={() => setView('studio')}
+          onResume={showStudio}
           onChoosePhoto={() => photoInputRef.current?.click()}
           onChooseVideo={() => videoInputRef.current?.click()}
           onStartCamera={() => void startCamera()}

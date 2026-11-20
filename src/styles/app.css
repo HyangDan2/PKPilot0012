@@ -804,14 +804,14 @@ img {
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   padding-right: 2px;
 }
 .panel-block {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  padding: 14px;
+  padding: 12px 13px;
 }
 .block-head {
   display: flex;
@@ -911,7 +911,7 @@ img {
   padding: 4px;
 }
 .class-hint {
-  margin: 8px 0;
+  margin: 7px 0;
   font-size: 11px;
   color: var(--muted);
   line-height: 1.5;
@@ -920,7 +920,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  max-height: 176px;
+  max-height: 132px;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-right: 2px;

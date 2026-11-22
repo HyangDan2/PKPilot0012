@@ -1,9 +1,9 @@
 {
-  "name": "pkpilot0012-vektra-var",
+  "name": "pkpilot0012-objectlens",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "HD2Lab Vektra Vár — client-side YOLO object detection studio",
+  "description": "HD2Lab ObjectLens — client-side YOLO object detection studio",
   "scripts": {
     "dev": "node scripts/sync-ort.mjs && vite",
     "build": "node scripts/sync-ort.mjs && tsc --noEmit && vite build",

@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 
 const base = process.argv[2] ?? 'http://127.0.0.1:4173/PKPilot0012/';
-const out = process.argv[3] ?? '/workspace/work/shots-vektra';
+const out = process.argv[3] ?? '/workspace/work/shots-objectlens';
 const exe = process.env.PW_CHROMIUM;
 
 const browser = await chromium.launch(exe ? { executablePath: exe, args: ['--enable-unsafe-swiftshader'] } : {});

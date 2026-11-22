@@ -1,4 +1,4 @@
-# Third-Party Notices — PKPilot 0012 (Vektra Vár)
+# Third-Party Notices — PKPilot 0012 (ObjectLens)
 
 이 앱은 아래 소프트웨어와 외부 자산을 사용합니다.
 
@@ -41,4 +41,4 @@ AGPL-3.0 조건은 모델 파일에 그대로 적용되며, 상업적 이용이�
 | Soft Iris / Navy & Lavender 테마 토큰 | HD2Lab Web-HQ · Server-HQ | MIT |
 
 COCO 클래스 이름은 [COCO 데이터셋](https://cocodataset.org/)의 80종 목록을 따르며, 한국어 표기는
-HD2Lab이 붙인 것입니다. "Vektra Vár"는 HD2Lab의 앱 이름입니다.
+HD2Lab이 붙인 것입니다. "ObjectLens"는 HD2Lab의 앱 이름입니다.

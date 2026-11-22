@@ -643,7 +643,7 @@ export default function App() {
         showLabels,
         mosaic,
       });
-      downloadBlob(blob, `vektra-var-${safeBaseName(target.name)}.png`);
+      downloadBlob(blob, `objectlens-${safeBaseName(target.name)}.png`);
       setNotice('탐지 결과를 PNG로 저장했습니다.');
     } catch (error) {
       setNotice(error instanceof Error ? error.message : 'PNG를 저장하지 못했습니다.');
@@ -688,7 +688,7 @@ export default function App() {
     const text = jsonText();
     if (!text) return;
     const name = mode === 'photo' ? activePhoto?.name : video?.name;
-    downloadBlob(new Blob([text], { type: 'application/json' }), `vektra-var-${safeBaseName(name ?? 'detections')}.json`);
+    downloadBlob(new Blob([text], { type: 'application/json' }), `objectlens-${safeBaseName(name ?? 'detections')}.json`);
     setNotice('탐지 좌표 JSON을 저장했습니다.');
   }, [jsonText, mode, activePhoto, video]);
 
@@ -733,10 +733,10 @@ export default function App() {
   return (
     <div className="app" data-view={view}>
       <header className="topbar">
-        <button type="button" className="brand" onClick={goHome} aria-label="Vektra Vár 홈으로 이동">
+        <button type="button" className="brand" onClick={goHome} aria-label="ObjectLens 홈으로 이동">
           <span className="mark" aria-hidden />
           <span className="brand-name">HD2Lab</span>
-          <em>Vektra Vár</em>
+          <em>ObjectLens</em>
         </button>
 
         <div className="topbar-actions">

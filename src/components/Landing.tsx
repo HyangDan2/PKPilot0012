@@ -47,7 +47,7 @@ export function Landing({ info, samples, session, onResume, onChoosePhoto, onCho
           <div className="hero-mark" aria-hidden>
             <IconTarget size={30} />
           </div>
-          <p className="hero-kicker">HD2LAB · VEKTRA VÁR</p>
+          <p className="hero-kicker">HD2LAB · OBJECTLENS</p>
           <h1>
             기기 안에서, <em>객체</em>를 봅니다.
           </h1>

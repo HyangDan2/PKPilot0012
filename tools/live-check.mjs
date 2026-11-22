@@ -28,14 +28,14 @@ await boot(pc);
 await pc.getByTestId('sample-street').click();
 console.log('pc summary:', await detect(pc));
 await pc.waitForTimeout(1200);
-await pc.screenshot({ path: '/workspace/work/vektra-var-pc.png' });
+await pc.screenshot({ path: '/workspace/work/objectlens-pc.png' });
 const pcOverflow = await pc.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
 console.log('pc overflow:', pcOverflow);
 
 // ── PC (dark) ───────────────────────────────────────────────────────────────
 await pc.getByTestId('theme-fab').click();
 await pc.waitForTimeout(900);
-await pc.screenshot({ path: '/workspace/work/vektra-var-dark.png' });
+await pc.screenshot({ path: '/workspace/work/objectlens-dark.png' });
 console.log('theme now:', await pc.getAttribute('html', 'data-theme'));
 await pc.getByTestId('theme-fab').click();
 await pc.waitForTimeout(400);
@@ -50,7 +50,7 @@ await boot(mobile);
 await mobile.getByTestId('sample-street').click();
 console.log('mobile summary:', await detect(mobile));
 await mobile.waitForTimeout(1200);
-await mobile.screenshot({ path: '/workspace/work/vektra-var-mobile.png' });
+await mobile.screenshot({ path: '/workspace/work/objectlens-mobile.png' });
 const mobileOverflow = await mobile.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
 console.log('mobile overflow:', mobileOverflow);
 

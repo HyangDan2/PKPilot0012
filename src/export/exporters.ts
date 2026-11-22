@@ -18,7 +18,7 @@ export function buildDetectionJson(meta: ExportMeta, detections: readonly Detect
   }
 
   const payload = {
-    app: 'Vektra Vár',
+    app: 'ObjectLens',
     studio: 'HD2Lab',
     model: 'yolo11n.onnx — COCO 80',
     generatedAt: new Date().toISOString(),
@@ -104,5 +104,5 @@ export function safeBaseName(name: string): string {
     .replace(/\.[^./\\]+$/, '')
     .replace(/[^\p{L}\p{N}._-]+/gu, '-')
     .replace(/^[.\-]+|[.\-]+$/g, '');
-  return stem.length > 0 ? stem.slice(0, 60) : 'vektra-var';
+  return stem.length > 0 ? stem.slice(0, 60) : 'objectlens';
 }

@@ -12,7 +12,7 @@ import { join } from 'node:path';
  */
 function dropBundledOrtWasm() {
   return {
-    name: 'vektra-drop-bundled-ort-wasm',
+    name: 'objectlens-drop-bundled-ort-wasm',
     apply: 'build' as const,
     closeBundle() {
       const assets = join(process.cwd(), 'dist', 'assets');
@@ -27,12 +27,12 @@ function dropBundledOrtWasm() {
       } catch {
         /* no dist/assets is not an error worth failing a build over */
       }
-      if (removed > 0) console.log(`[vektra] removed ${removed} duplicate ORT wasm from dist/assets`);
+      if (removed > 0) console.log(`[objectlens] removed ${removed} duplicate ORT wasm from dist/assets`);
     },
   };
 }
 
-// Vektra Vár is published under a GitHub Pages project sub-path.
+// ObjectLens is published under a GitHub Pages project sub-path.
 export default defineConfig({
   base: '/PKPilot0012/',
   plugins: [react(), dropBundledOrtWasm()],

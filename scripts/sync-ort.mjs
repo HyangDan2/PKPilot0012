@@ -3,7 +3,7 @@
  * onnxruntime-web loads its runtime from a directory we serve ourselves, so the
  * build never reaches a CDN (and never hits a CORS wall).
  *
- * Vektra Vár imports the `onnxruntime-web/all` bundle: it carries the WebGPU,
+ * ObjectLens imports the `onnxruntime-web/all` bundle: it carries the WebGPU,
  * WebGL and WASM execution providers, and all three share the JSEP wasm build.
  * Only that pair is copied, into `public/ort/`, which Vite then serves as
  * `/PKPilot0012/ort/`.

@@ -5,8 +5,8 @@ const page = await browser.newPage({ viewport: { width: 900, height: 300 }, devi
 await page.goto('http://127.0.0.1:4173/PKPilot0012/');
 await page.waitForTimeout(1200);
 const brand = page.locator('.brand');
-await brand.screenshot({ path: '/workspace/work/shots-vektra/shot-brand.png' });
+await brand.screenshot({ path: '/workspace/work/shots-objectlens/shot-brand.png' });
 const box = await brand.boundingBox();
 console.log('brand box', box);
-await page.screenshot({ path: '/workspace/work/shots-vektra/shot-header.png', clip: { x: 0, y: 0, width: 500, height: 70 } });
+await page.screenshot({ path: '/workspace/work/shots-objectlens/shot-header.png', clip: { x: 0, y: 0, width: 500, height: 70 } });
 await browser.close();

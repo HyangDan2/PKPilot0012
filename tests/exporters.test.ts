@@ -13,7 +13,7 @@ describe('buildDetectionJson', () => {
   const payload = JSON.parse(json);
 
   it('names the studio and the model', () => {
-    expect(payload.app).toBe('Vektra Vár');
+    expect(payload.app).toBe('ObjectLens');
     expect(payload.model).toContain('yolo11n');
   });
 
@@ -49,6 +49,6 @@ describe('safeBaseName', () => {
   });
 
   it('falls back for a name with nothing usable', () => {
-    expect(safeBaseName('...')).toBe('vektra-var');
+    expect(safeBaseName('...')).toBe('objectlens');
   });
 });
